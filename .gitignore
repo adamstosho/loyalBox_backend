@@ -1,10 +1,49 @@
-env
+# Node modules
+node_modules/
+
+# Environment variables
+.env
 
 # Logs
-logs
-node_modules/
-npm-debug.log
-yarn-error.log
+logs/
+*.log
+log.txt
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by testing tools
+coverage/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Optional npm cache directory
+.npm/
+
+# Build directory
 dist/
 build/
-# Dependency directories
+
+# Debug
+debug.log
+
+# MongoDB dump files
+dump/
+
+# Misc
+*.local
+.env.*.local
