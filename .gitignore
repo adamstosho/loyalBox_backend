@@ -1,49 +1,35 @@
-# Node modules
-node_modules/
+#Node.js dependencies
 
-# Environment variables
+node_modules/ npm-debug.log yarn-error.log yarn.lock package-lock.json
+
+#Environment variables
+
 .env
 
-# Logs
-logs/
-*.log
-log.txt
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+#Logs
 
-# OS-specific
-.DS_Store
-Thumbs.db
+logs/ *.log .log.
 
-# Runtime data
-pids/
-*.pid
-*.seed
-*.pid.lock
+#Build artifacts
 
-# Coverage directory used by testing tools
-coverage/
+dist/ build/
 
-# IDEs and editors
-.vscode/
-.idea/
-*.sublime-workspace
-*.sublime-project
+#Temporary files
 
-# Optional npm cache directory
-.npm/
+*.tmp *.swp *.swo
 
-# Build directory
-dist/
-build/
+#IDE and editor files
 
-# Debug
-debug.log
+.vscode/ .idea/ *.sublime-project *.sublime-workspace
 
-# MongoDB dump files
-dump/
+#OS-specific files
 
-# Misc
-*.local
-.env.*.local
+.DS_Store Thumbs.db
+
+#MongoDB local data (if any)
+
+data/ *.dump
+
+#Swagger-generated files (if any)
+
+swagger-output.json
