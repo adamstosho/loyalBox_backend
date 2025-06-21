@@ -5,12 +5,12 @@
     "version": "1.0.0",
     "description": "API for LoyalBox loyalty program, allowing users to register, log in, earn/redeem points, and admins to manage rewards and users."
   },
-  "servers": [
-    {
-      "url": "http://localhost:5000/api",
-      "description": "Local development server"
-    }
-  ],
+ "servers": [
+  {
+    "url": "https://loyalbox-api.onrender.com/api",
+    "description": "Production server on Render"
+  }
+],
   "components": {
     "securitySchemes": {
       "BearerAuth": {
