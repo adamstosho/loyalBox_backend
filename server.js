@@ -7,13 +7,10 @@ const transactionRoutes = require('./routes/transactions');
 const swaggerUi = require('swagger-ui-express');
 const swaggerJsdoc = require('swagger-jsdoc');
 
+
 dotenv.config();
 
-const swaggerOptions = {
-  definition: require('./swagger.json'),
-  apis: ['./routes/*.js'],
-};
-const swaggerDocs = swaggerJsdoc(swaggerOptions);
+
 
 const app = express();
 
@@ -21,7 +18,15 @@ const app = express();
 connectDB();
 
 // Middleware
+
 app.use(express.json());
+
+
+const swaggerOptions = {
+  definition: require('./swagger.json'),
+  apis: ['./routes/*.js'],
+};
+const swaggerDocs = swaggerJsdoc(swaggerOptions)
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 // Routes
@@ -32,6 +37,10 @@ app.use('/api/transactions', transactionRoutes);
 // Basic route
 app.get('/', (req, res) => {
   res.send('LoyalBox API is running');
+});
+
+app.get('/', (req, res) => {
+  res.send('Hello from Render!');
 });
 
 // Start server
